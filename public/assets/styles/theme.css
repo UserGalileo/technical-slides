@@ -1,0 +1,72 @@
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+@import url(https://fonts.googleapis.com/css?family=JetBrains+Mono:400,700,400italic);
+@import url(https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700);
+@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700);
+@import url(https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700);
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 2rem;
+    --color-primary: #7C4DFF;
+    --color-secondary: rgb(68, 0, 255);
+}
+h1, h2, h3, h4, h5 {
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    position: relative;
+}
+h2:after {
+    content:'';
+    display:block;
+    border: 1px solid rgba(0,0,0,.2);
+    width: 70px;
+    position: absolute;
+    bottom: -14px;
+}
+h1 {
+    font-size: 5rem !important;
+}
+h2 {
+    font-size: 3rem;
+}
+h3 {
+    font-size: 2rem;
+}
+.remark-code,
+.remark-inline-code {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.remark-inline-code {
+    background: #f6f3ff;
+}
+
+.remark-slide-content {
+    padding: 1em 2em;
+}
+
+.remark-code-line-highlighted {
+    background: rgba(0,0,0,.05);
+}
+
+.hljs-default .hljs {
+    background: #f6f3ff;
+    border-radius: 0 .3rem .3rem 0;
+    padding: 1rem;
+    line-height: normal;
+    border-left: 2px solid var(--color-primary);
+}
+
+.slide-separator {
+    background: var(--color-secondary);
+    color: white !important;
+}
+
+.cols {
+    display: flex;
+}
+
+.half {
+    flex: 50%;
+}
