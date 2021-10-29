@@ -7,11 +7,6 @@ class: slide-separator
 # NgRx
 
 ---
-## Roadmap
-
-1. 
-
----
 ## Premessa
 
 Cos'è uno **stato**?
