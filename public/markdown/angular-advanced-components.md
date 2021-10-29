@@ -164,7 +164,7 @@ Un componente dinamico può essere istanziato da un `Component` oppure da una `D
 <div #ad></div>
 ```
 
-#### _Angular < 13_
+#### _Angular >= 13_
 
 ```ts
 @Directive({ ... })
