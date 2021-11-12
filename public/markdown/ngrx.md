@@ -80,6 +80,19 @@ Redux è consigliato in questi scenari:
 - Basato sul pattern di Redux
 - Basato sugli Observable
 ---
+### @ngrx/store
+- Tutti i benefici di Redux
+  - Single Source of Truth
+  - One-way data flow...
+- Facilità di testing
+- Performance
+  - `@Input` immutabili
+  - `ChangeDetectionStrategy.OnPush`
+- Divisione degli stati
+  - Root (stato principale)
+  - Feature (stati lazy-loaded)
+  
+---
 ## State
 
 ```ts
@@ -294,6 +307,27 @@ export const getTodoState = createFeatureSelector<TodoState>('todo');
 ```
 
 ---
+## Tipologie di Componenti
+
+.cols[
+.half[
+### Container
+- Connessi allo Store
+- Lanciano Azioni
+- Leggono lo stato dallo Store
+- Tipicamente, rappresentano una schermata
+]
+.half[
+### Presentational
+- Non connessi allo Store
+- Notificano il padre via `@Output`
+- Leggono lo stato via `@Input`
+- Tipicamente, rappresentano porzioni di schermata
+- Tipicamente, sono la maggior parte dei componenti
+]
+]
+
+---
 ## DevTools
 Installa l'estensione per il browser **Redux Devtools Extension** per avere il _time-travel debugger_
 
@@ -316,3 +350,16 @@ export class AppModule {}
 
 ---
 <img src="../images/redux-devtools.png" style="width: 100%; margin: auto; display: block">
+
+---
+## Effects
+- Ascoltano le azioni di NgRx
+- Isolano side-effect dai Componenti
+  - Chiamate al server
+  - Popup, modali
+  - Stati Loading / Pending
+  - etc
+
+---
+
+<img src="../images/ngrx-cycle.png" style="width: 90%; margin: auto; display: block">
